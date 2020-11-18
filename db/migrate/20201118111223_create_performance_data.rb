@@ -5,7 +5,7 @@ class CreatePerformanceData < ActiveRecord::Migration[6.0]
       t.references :user, index: true, foreign_key: true
       t.hstore :data
 
-      t.timestamps null:false
+      t.timestamps null: false
     end
   end
 end
