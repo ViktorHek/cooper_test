@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     namespace :v0 do
       resources :pings, only: [:index], constraints: { format: 'json' }
     end
-    namespace :v1 do  #check adding User class in course material 
+    namespace :v1, defaults: { format: :json } do
+      resources :performance_data, only: [:create]
     end
   end
 end
